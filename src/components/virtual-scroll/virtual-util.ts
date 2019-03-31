@@ -273,6 +273,7 @@ export function updateDimensions(plt: Platform, nodes: VirtualNode[], cells: Vir
   let element: VirtualHtmlElement;
   let cell: VirtualCell;
   let previousCell: VirtualCell;
+  if (!cells || !nodes) return;
   const totalCells = cells.length;
 
   for (var i = 0; i < nodes.length; i++) {
@@ -410,6 +411,7 @@ export function writeToNodes(plt: Platform, nodes: VirtualNode[], cells: Virtual
   let element: VirtualHtmlElement;
   let cell: VirtualCell;
   let transform: string;
+  if (!cells || !nodes) return;
   const totalCells = Math.max(totalRecords, cells.length);
 
   for (var i = 0, ilen = nodes.length; i < ilen; i++) {

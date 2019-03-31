@@ -543,6 +543,7 @@ export class VirtualScroll implements DoCheck, OnChanges, AfterContentInit, OnDe
       const data = this._data;
       const records = this._records;
 
+      if (!data) return;
       if (needClean) {
         // ******** DOM WRITE ****************
         updateDimensions(this._plt, nodes, cells, data, true);
@@ -631,6 +632,7 @@ export class VirtualScroll implements DoCheck, OnChanges, AfterContentInit, OnDe
     const cells = this._cells;
     const nodes = this._nodes;
 
+    if (!cells || !nodes) return;
     // ******** DOM WRITE ****************
     writeToNodes(this._plt, nodes, cells, this._recordSize);
 
@@ -652,6 +654,7 @@ export class VirtualScroll implements DoCheck, OnChanges, AfterContentInit, OnDe
     // domWrite callback so everyone plays nice
     // ******** DOM WRITE ****************
     const nodes = this._nodes;
+    if (!nodes) return;
     for (var i = 0; i < nodes.length; i++) {
       if (nodes[i].hasChanges) {
         (<any>nodes[i].view).detectChanges();

@@ -934,6 +934,7 @@ export class Content extends Ion implements OnDestroy, AfterViewInit, IContent {
    * @hidden
    */
   imgsUpdate() {
+    if (!this._scroll) return;
     if (this._scroll.initialized && this._imgs.length && this.isImgsUpdatable()) {
       updateImgs(this._imgs, this.scrollTop, this.contentHeight, this.directionY, this._imgReqBfr, this._imgRndBfr);
     }
