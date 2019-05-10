@@ -9,9 +9,7 @@ an [issue](https://github.com/ionic-team/ionic-v3/issues/new) on this repository
 * Fork source repo from GH (i.e. https://github.com/xxx/ionic-v3)
 * Clone new repo
 * Make changes
-* npm run-script link && sed -i.bak 's:ionic-angular:@namespace/ionic-angular:g' dist/ionic-angular/package.json && (cd dist/ionic-angular/ && npm publish)
-* npm login
-* npm publish
+* npm run-script link && sed -i.bak 's:ionic-angular:@jobnimbus/ionic-angular:g' dist/ionic-angular/package.json && (cd dist/ionic-angular/ && npm publish)
 * // Install custom npm module as "ionic-angular" (requires npm 6.9.0)
-* npm install ionic-angular@npm:@namespace/ionic-angular
+* npm install ionic-angular@npm:@jobnimbus/ionic-angular
 * Publish changes to forked repo
